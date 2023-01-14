@@ -77,14 +77,7 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-      <Container className="mt-16 md:mt-20">
-        <div className="max-w-2xl">
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <a href='https://camel.ck.page' className='underline hover:text-teal-500'>Subscribe to the newsletter</a>
-          </p>
-        </div>
-      </Container>
-      <Container className="mt-9">
+      <Container className="mt-12 md:mt-16">
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
             {articles.map((article) => (
