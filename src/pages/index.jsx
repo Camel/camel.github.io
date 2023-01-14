@@ -5,12 +5,11 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
-  LinkedInIcon,
+  LinkedInIcon
 } from '@/components/SocialIcons'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-
 
 
 function Article({ article }) {
@@ -60,7 +59,7 @@ export default function Home({ articles }) {
             <br/><br/>
             <a href='/posts' className='underline hover:text-teal-500'>Writing</a> at the insection of emerging tech, business models, and investing.
             <br/><br/>
-            <a href='/investing' className='underline hover:text-teal-500'>Investing</a> in B2B SaaS. Focused on <u>applied ML</u>, <u>infra</u>, <u>cyber</u>, <u>vertical SaaS</u>. Venture + growth + buyouts.
+            <a href='/investing' className='underline hover:text-teal-500'>Investing</a> in B2B SaaS. Focused on applied ML, infra, cyber, vertical SaaS. Venture + growth + buyouts.
             <br/><br/>
             Based in NYC. 
           </p>
@@ -79,6 +78,13 @@ export default function Home({ articles }) {
         </div>
       </Container>
       <Container className="mt-16 md:mt-20">
+        <div className="max-w-2xl">
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            <a href='https://camel.ck.page' className='underline hover:text-teal-500'>Subscribe to the newsletter</a>
+          </p>
+        </div>
+      </Container>
+      <Container className="mt-9">
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">
             {articles.map((article) => (

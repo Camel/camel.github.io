@@ -41,12 +41,12 @@ export default function ArticlesIndex({ articles }) {
         <title>Articles - Andrew Camel</title>
         <meta
           name="description"
-          content="xxx"
+          content="Emerging tech, business models, and investing"
         />
       </Head>
       <SimpleLayout
-        title="A collection from over the years"
-        intro="xxx"
+        title="Emerging tech, business models, and investing"
+        intro={<a href='https://camel.ck.page' className='underline hover:text-teal-500'>Subscribe to the newsletter</a>}
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">

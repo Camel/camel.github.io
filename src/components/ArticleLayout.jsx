@@ -62,7 +62,12 @@ export function ArticleLayout({
                   <span className="ml-3">{formatDate(meta.date)}</span>
                 </time>
               </header>
-              <Prose className="mt-8">{children}</Prose>
+              <Prose className="mt-8">
+                {children}
+                <p className='text-center mt-12'>
+                  <a href='https://camel.ck.page' className='underline hover:text-teal-500'>Subscribe to the newsletter</a>
+                </p>
+              </Prose>
             </article>
           </div>
         </div>
