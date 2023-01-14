@@ -143,7 +143,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="A collection from over the years"
-        intro="Seed to pre-IPO, across a big range of deal structures"
+        intro="Seed to pre-IPO, range of deal structures"
       >
         <ul
           role="list"
