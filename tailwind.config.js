@@ -106,7 +106,7 @@ module.exports = {
           h2: {
             fontSize: theme('fontSize.xl')[0],
             lineHeight: theme('lineHeight.7'),
-            marginTop: theme('spacing.20'),
+            marginTop: theme('spacing.16'),
             marginBottom: theme('spacing.4'),
           },
           h3: {
@@ -210,6 +210,14 @@ module.exports = {
           'li :is(li, p)': {
             marginTop: theme('spacing.3'),
             marginBottom: theme('spacing.3'),
+          },
+          'ul > li': {
+            marginTop: theme('spacing.1'),
+            marginBottom: theme('spacing.1')
+          },
+          'ul': {
+            marginTop: theme('spacing.1'),
+            listStyleType: 'disc'
           },
 
           // Code blocks

@@ -1,0 +1,90 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Andrew Camel',
+  date: '2023-01-24',
+  title: 'How to make $6bn transitioning from mainframe tech to modern SaaS',
+  description:
+    'The story of Compuware and Thoma Bravo',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+I love the stories of the 5-6x+ outcomes on $1bn+ checks, particularly in turnaround situations. It’s so easy to write off legacy vendors as “done” (and most do), but if you can see value where others don’t, there are billions to be made.
+
+I’m surprised I’m the first one to write this given the quality of the story… Frankly I was surprised the name was even mentioned When @BuccoCapital mentioned [“Compuware was in his top three companies for new analysts to study”](https://twitter.com/patrick_oshag/status/1613885888349577216), so I tried to find a good story on this. Maybe I just missed it... In any case:
+
+As with any good turnaround story, you need a “schlocky” profile you can pay a modest multiple for. Compuware certainly had it.
+
+When Thoma Bravo bought Compuware in 2014 for $2.4bn, here’s what the business looked like on an LTM basis...
+
+## Compuware's Entry Profile
+
+* <b>Revenue:</b> <u>$720m</u> in revenue for FY14 (ending Mar 31), flat from FY12
+  * <b>Mainframe:</b> <u>$296m</u> in revenue, -11% y/y from <u>$333m</u> in FY13
+  * <b>APM:</b> <u>$327m</u>, +9% from <u>$301m</u> in FY13
+  * <b>Services & Other:</b> <u>$97m</u>, +10% from <u>$90m</u> in FY13
+* <b>OpEx:</b> <u>$216m</u> in S&M, <u>$86m</u> in R&D, and <u>$135m</u> in G&A, all down ~3% from FY13 due to small restructuring / cuts
+* <b>Profit:</b> <u>$72m</u> in net income, <u>$138m</u> in free cash flow
+* <b>Balance Sheet:</b> <u>$300m</u> in cash, no debt
+
+And the profitability (operating margin) by business line is worth noting:
+* <b>Mainframe:</b> 75% (!) – though not hugely surprising given most of this is maintenance revenue
+* <b>APM:</b> 8%
+* <b>Application Services:</b> -24%
+
+<b><u>Key Takeaways:</u></b> Of the $227m in total business line contribution margin, mainframe was $222m, APM $28m, and services -$23 million. And that very profitable mainframe business is of course shrinking at ~11% y/y… Not to mention you’re spending $216 million annually in S&M for a business that in aggregate is not growing.
+
+The one saving grace here is the company has a clean balance sheet ($300m cash, no debt).
+
+TB paid roughly 15x LTM FCF ($2.1bn EV / $138m in LTM FCF). And by my estimation, it was only ~$1bn in equity assuming ~$700 million in debt, and ~$400 million in equity roll.
+
+<b>Ok take a step back, numbers aside, what does Compuware do / how did it get to this point?</b>
+
+## The 41 years from 1973 to 2014 (in 30 seconds)
+
+Founded in 1973 in Michigan, Compuware started as an IT services company helping businesses adopt newly emerging technology. As the founders put it “we will help people do things with computers”.
+
+The company remained an IT services business until it launched its first product in 1977, a fault diagnosis tool called Abend-AID. The name was derived from “abnormal end”, referring to unexpected system errors or failures. Before Abend-AID, programmers needed to debug issues manually, but Compuware’s tool made this far easier – the tool could intercept system error messages during program execution, helping programmers pinpoint precise error locations and determine sources of failure. <b>(Incredible how similar this pitch sounds to modern-day APM / error tracking / tracing, almost 50 years later).</b>
+
+Compuware’s focus was on mainframe systems, which were beginning to enable a broad array of business applications. Keeping these applications running was critical, so adoption of Abend-AID grew quickly. Through the 1980s, Compuware shifted its focus entirely to software, adding to its portfolio of monitoring/diagnosis tools for a range of computing problems.
+
+Fast forward to 1992, the Company went public and through 2001 made several acquisitions. Its problems began in 2002 with a lawsuit filed against IBM, leading to a restructuring in 2004. Its mainframe business then started to shrink from its peak. The stock meandered between 2006 and 2014 until its ultimate sale to TB.
+
+Despite the Company’s issues, in July 2011, it made a key acquisition of a company called “dynaTrace” for $256 million, founded in 2005 in Austria. Dynatrace was bundled into the Company’s APM offerings and the CEO, John Van Siclen, stayed on as the head of that business unit.
+
+## The cloud transition
+
+In early 2014 prior to the TB deal, Compuware launched Dynatrace Ruxit, a hosted version of the Dynatrace product (originally ruxit.com). As some additional market context: In the Company’s 2014 annual report, it named its competitors as CA and Broadcom in the legacy category, and AppDynamics and Riverbed as the new vendors. Recall that this is still 3 years until the Cisco acquisition of AppDynamics; at this point AppDynamics still has ~$50 million in ARR. Hosted APM solutions built for cloud-first companies/products were still in relatively early days, and Dynatrace logically had to launch Ruxit to play this trend.
+
+Thoma Bravo closed its acquisition of Compuware in Q4 2014. In May 2015, John Van Siclen (the APM business unit head) recalls the following. Note that Bernd is Bernd Greifeneder, the CTO and Founder of Dynatrace. John Van Siclen had taken over Bernd’s CEO position in 2008.
+
+<blockquote>“Bernd took three months with a team of his best product folks and came back in May [2015],” Van Siclen said. “At the dinner, they said ‘we're going to recommend that we set up a separate team and start from scratch and build an entirely new platform because there's an opportunity with the disruption of the cloud to leap ahead.’”</blockquote>
+
+<b>This is one of those key pivotal strategic moments in the Company’s history that formed the basis for its future success</b> – without this transition, Dynatrace would not be the $10bn+ company it was today. While cloud in 2014 was clearly the major trend to play (AWS had already been around 10 yrs by this point), making a long-duration and inherently risky investment in a technology replatforming is not common in private equity. Though as we will soon see, it's just this type of risk than can turn a 2x into a 6x+.
+
+After competing this replatforming in 2016, Dynatrace Ruxit became simply “Dynatrace”.
+
+Fast forward to March 2019, Dynatrace had entirely transitioned 81% revenue to this new cloud-based platform and subscription model. Of the total $431m in revenue in FY19, $350m was subscription (+34% y/y). License/maintenance had dropped from $131m in FY17 to $40m in FY19.
+
+After competing its spin out from Compuware in July 2019 (and John Van Siclen taking back over the CEO role), Dynatrace went public in August at a $4.5bn valuation, trading up 49% on the first day to $6.7 billion, 15.5x the $431 million in FY19 revenue.
+
+As of Sep 30 2022, subscription revenue is up 23% y/y to a $1.05bn run rate, with a 29% FCF margin.
+
+## Returns math
+
+I’m jumping the gun a bit – we need to tie out our one loose end, Compuware, which BMC (owned by KKR) bought from Thoma Bravo for $2bn in 2020.
+
+Now the returns…
+
+* <b>Dynatrace liquidity ($2.5bn):</b> Since the IPO, Thoma Bravo has sold ~$2.5bn in stock, trimming its ownership from ~71% post-IPO to ~30% today.
+* <b>Compuware liquidity ($1.4bn):</b> If we assume Thoma Bravo owned the same amount of Compuware as it did of Dynatrace (70%), and there was no debt on the business at sale, Thoma Bravo would have netted $1.4bn from the $2bn sale to BMC.
+* <b>Remaining Dynatrace holdings ($3bn):</b> 30% remaining ownership * ~$10bn value (as of January 14th 2023) = $3bn in remaining value for Thoma Bravo.
+
+So on the assumed $1bn initial investment, our (very) rough math would suggest <b>TB is holding the investment at a 6.9x, with 3.9x liquid, and another 3.0x still at work</b>.
+
+## Observations / key takeaways
+
+* <b>Returns require risk:</b> This path seems linear/obvious in retrospect, but in 2014, the future of the cloud, of what Dynatrace could become vs what it had been under Compuware, etc. was not certain. Reaching this outcome required a willingness for TB to take a long-duration bet.
+* <b>Continuity in the technology team is critical:</b> The founder of Dynatrace remains the CTO still today. One guy’s view, but I think it’s unlikely this transition could have ever happened if he and Van Siclen had not stayed with the business through the full journey; it requires such a first-principles understanding of the product, problem, and market that you can’t get as an outsider or acquirer. Credit may also be due to Compuware for keeping these two leaders onboard.
+* <b>There is opportunity in concurrent disruption:</b> This story is a classic / down the fairway example of the innovators dilemma, disrupting yourself before the market disrupts you, but I would add a lens to this: <b>disruption in technology often occurs concurrently to both you as the vendor and to your customers</b> – as shown with Dynatrace/Compuware, if a vendor can evolve / ride the wave of innovation in lock-step with its customers, there’s enormous value in having that captive base of relationships. And I think as a PE buyer, this is an incredibly useful lens through which to identify opportunities.
